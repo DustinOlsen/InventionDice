@@ -6,85 +6,95 @@
 //
 
 import SwiftUI
-import CoreData
+
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+   
+    var ideaDice = IdeaDice()
+    @State private var ideaText = ""
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+        
+        VStack {
+            
+            Spacer()
+            
+            Text("\(ideaText)")
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .frame(width: 350.0, height: 200.0)
+            
+            Spacer()
+            
+            Section(header: Text("Dice")) {
+                
+                HStack {
+                    
+                    VStack {
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedMaterial, die: .materials)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: 1)
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedPower, die: .power)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: 1)
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedScale, die: .scale)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: 1)
+                        
+                        
+                    }.padding()
+                    
+                    VStack {
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedDevice, die: .device)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedConsumer, die: .consumer)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedAction, die: .action)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    }.padding()
                 }
-                .onDelete(perform: deleteItems)
             }
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            
+            Button("Roll") {
+                ideaText = ideaDice.rollIdea()
+                
             }
-            Text("Select an item")
+            .padding(30)
+            
+            Spacer()
         }
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+    
 
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }

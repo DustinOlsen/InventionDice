@@ -17,6 +17,12 @@
 		BB945BC027F53629008B4A0D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BAA27F53628008B4A0D /* Persistence.swift */; };
 		BB945BC127F53629008B4A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB945BAB27F53629008B4A0D /* Assets.xcassets */; };
 		BB945BC227F53629008B4A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB945BAB27F53629008B4A0D /* Assets.xcassets */; };
+		BB945BCC27F53671008B4A0D /* SavedIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BCB27F53671008B4A0D /* SavedIdeasView.swift */; };
+		BB945BCD27F53671008B4A0D /* SavedIdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BCB27F53671008B4A0D /* SavedIdeasView.swift */; };
+		BB945BD227F5378B008B4A0D /* IdeaDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BD127F5378B008B4A0D /* IdeaDice.swift */; };
+		BB945BD327F5378B008B4A0D /* IdeaDice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BD127F5378B008B4A0D /* IdeaDice.swift */; };
+		BB945BD527F53A8C008B4A0D /* IdeaDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BD427F53A8C008B4A0D /* IdeaDiceView.swift */; };
+		BB945BD627F53A8C008B4A0D /* IdeaDiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BD427F53A8C008B4A0D /* IdeaDiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,9 @@
 		BB945BB027F53629008B4A0D /* InventionDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventionDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB945BB627F53629008B4A0D /* InventionDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InventionDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB945BB827F53629008B4A0D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		BB945BCB27F53671008B4A0D /* SavedIdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedIdeasView.swift; sourceTree = "<group>"; };
+		BB945BD127F5378B008B4A0D /* IdeaDice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDice.swift; sourceTree = "<group>"; };
+		BB945BD427F53A8C008B4A0D /* IdeaDiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaDiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,9 @@
 			children = (
 				BB945BA827F53628008B4A0D /* InventionDiceApp.swift */,
 				BB945BA927F53628008B4A0D /* ContentView.swift */,
+				BB945BD127F5378B008B4A0D /* IdeaDice.swift */,
+				BB945BD427F53A8C008B4A0D /* IdeaDiceView.swift */,
+				BB945BCB27F53671008B4A0D /* SavedIdeasView.swift */,
 				BB945BAA27F53628008B4A0D /* Persistence.swift */,
 				BB945BAB27F53629008B4A0D /* Assets.xcassets */,
 				BB945BA627F53628008B4A0D /* InventionDice.xcdatamodeld */,
@@ -184,6 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB945BD527F53A8C008B4A0D /* IdeaDiceView.swift in Sources */,
+				BB945BCC27F53671008B4A0D /* SavedIdeasView.swift in Sources */,
+				BB945BD227F5378B008B4A0D /* IdeaDice.swift in Sources */,
 				BB945BB927F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */,
 				BB945BBF27F53629008B4A0D /* Persistence.swift in Sources */,
 				BB945BBB27F53629008B4A0D /* InventionDiceApp.swift in Sources */,
@@ -195,6 +210,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB945BD627F53A8C008B4A0D /* IdeaDiceView.swift in Sources */,
+				BB945BCD27F53671008B4A0D /* SavedIdeasView.swift in Sources */,
+				BB945BD327F5378B008B4A0D /* IdeaDice.swift in Sources */,
 				BB945BBA27F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */,
 				BB945BC027F53629008B4A0D /* Persistence.swift in Sources */,
 				BB945BBC27F53629008B4A0D /* InventionDiceApp.swift in Sources */,
