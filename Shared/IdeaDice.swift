@@ -34,7 +34,9 @@ class IdeaDice: ObservableObject {
         selectedAction = action.randomElement()!
         selectedConsumer = consumer.randomElement()!
         
-        let idea = "\(selectedMaterial) - \(selectedPower) - \(selectedScale) - \(selectedDevice) - \(selectedConsumer) -\(selectedAction)"
+//        let idea = "\(selectedMaterial) - \(selectedPower) - \(selectedScale) - \(selectedDevice) - \(selectedConsumer) -\(selectedAction)"
+        
+        let idea = "\(selectedPower) powered \(selectedMaterial) \(selectedConsumer) \(selectedScale) \(selectedAction) \(selectedDevice)"
         
         return idea
         
