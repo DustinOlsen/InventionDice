@@ -21,7 +21,7 @@ struct ContentView: View {
             
             Text("\(ideaText)")
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                .frame(width: 350.0, height: 200.0)
+                .frame(width: 350.0, height: 250.0)
             
             Spacer()
             
@@ -30,16 +30,20 @@ struct ContentView: View {
                 HStack {
                     
                     VStack {
+//                        Button(action: ideaDice.reRoll(aspect: Die.materials)) {
+//                            Text("")
+//                        }
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedPower, die: .power)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: 1)
                         
                         IdeaDiceView(ideaAspect: ideaDice.selectedMaterial, die: .materials)
                             .padding(12.0)
                             .frame(width: 115.0, height: 115.0)
                             .border(Color.primary, width: 1)
                         
-                        IdeaDiceView(ideaAspect: ideaDice.selectedPower, die: .power)
-                            .padding(12.0)
-                            .frame(width: 115.0, height: 115.0)
-                            .border(Color.primary, width: 1)
                         
                         IdeaDiceView(ideaAspect: ideaDice.selectedScale, die: .scale)
                             .padding(12.0)
@@ -51,12 +55,6 @@ struct ContentView: View {
                     
                     VStack {
                         
-                        IdeaDiceView(ideaAspect: ideaDice.selectedDevice, die: .device)
-                            .padding(12.0)
-                            .frame(width: 115.0, height: 115.0)
-                            .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                        
-                        
                         IdeaDiceView(ideaAspect: ideaDice.selectedConsumer, die: .consumer)
                             .padding(12.0)
                             .frame(width: 115.0, height: 115.0)
@@ -67,6 +65,13 @@ struct ContentView: View {
                             .padding(12.0)
                             .frame(width: 115.0, height: 115.0)
                             .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        
+                        
+                        IdeaDiceView(ideaAspect: ideaDice.selectedDevice, die: .device)
+                            .padding(12.0)
+                            .frame(width: 115.0, height: 115.0)
+                            .border(Color.primary, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                        
                     }.padding()
                 }
             }
@@ -75,7 +80,9 @@ struct ContentView: View {
                 ideaText = ideaDice.rollIdea()
                 
             }
+            .buttonStyle(.bordered)
             .padding(30)
+            
             
             Spacer()
         }

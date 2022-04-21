@@ -12,10 +12,14 @@ struct IdeaDiceView: View {
     let ideaAspect: String
     let die: Die
     
+    
+    
     var body: some View {
         VStack {
             
             Spacer()
+            
+            
             
             switch die {
                 
@@ -89,7 +93,7 @@ struct IdeaDiceView: View {
                             .aspectRatio(contentMode: .fit)
                         
                     case "Clockwork":
-                        Image(systemName: "clock") // Clockwork
+                        Image(systemName: "gear.circle") // Clockwork
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                         

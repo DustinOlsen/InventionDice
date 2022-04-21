@@ -33,14 +33,37 @@ class IdeaDice: ObservableObject {
         selectedDevice = device.randomElement()!
         selectedAction = action.randomElement()!
         selectedConsumer = consumer.randomElement()!
+
         
-//        let idea = "\(selectedMaterial) - \(selectedPower) - \(selectedScale) - \(selectedDevice) - \(selectedConsumer) -\(selectedAction)"
-        
-        let idea = "\(selectedPower) powered \(selectedMaterial) \(selectedConsumer) \(selectedScale) \(selectedAction) \(selectedDevice)"
+        let idea = "\(selectedPower)-powered \(selectedMaterial) \(selectedScale) \(selectedConsumer) \(selectedAction) \(selectedDevice)"
         
         return idea
         
     }
+    
+    func reRoll(aspect: Die) {
+        switch aspect {
+        case .materials:
+            selectedMaterial = materials.randomElement()!
+            
+        case .power:
+            selectedPower = power.randomElement()!
+            
+        case .scale:
+            selectedScale = scale.randomElement()!
+            
+        case .device:
+            selectedDevice = device.randomElement()!
+            
+        case .action:
+            selectedAction = action.randomElement()!
+            
+        case .consumer:
+            selectedConsumer = consumer.randomElement()!
+        }
+        
+    }
+    
 }
 
 enum Die {
