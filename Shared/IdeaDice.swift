@@ -41,6 +41,7 @@ class IdeaDice: ObservableObject {
         
     }
     
+    
     func reRoll(aspect: Die) {
         switch aspect {
         case .materials:
