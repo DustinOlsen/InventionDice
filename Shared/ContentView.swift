@@ -50,7 +50,6 @@ struct ContentView: View {
                             .frame(width: 115.0, height: 115.0)
                             .border(Color.primary, width: 1)
                         
-                        
                     }.padding()
                     
                     VStack {
