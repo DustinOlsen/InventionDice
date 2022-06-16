@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB51C737285BB68500755AF2 /* DiceRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51C736285BB68500755AF2 /* DiceRollView.swift */; };
+		BB51C738285BB68500755AF2 /* DiceRollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51C736285BB68500755AF2 /* DiceRollView.swift */; };
 		BB945BB927F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB945BA627F53628008B4A0D /* InventionDice.xcdatamodeld */; };
 		BB945BBA27F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB945BA627F53628008B4A0D /* InventionDice.xcdatamodeld */; };
 		BB945BBB27F53629008B4A0D /* InventionDiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB945BA827F53628008B4A0D /* InventionDiceApp.swift */; };
@@ -26,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB51C736285BB68500755AF2 /* DiceRollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollView.swift; sourceTree = "<group>"; };
 		BB945BA727F53628008B4A0D /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		BB945BA827F53628008B4A0D /* InventionDiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventionDiceApp.swift; sourceTree = "<group>"; };
 		BB945BA927F53628008B4A0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 			children = (
 				BB945BA827F53628008B4A0D /* InventionDiceApp.swift */,
 				BB945BA927F53628008B4A0D /* ContentView.swift */,
+				BB51C736285BB68500755AF2 /* DiceRollView.swift */,
 				BB945BD127F5378B008B4A0D /* IdeaDice.swift */,
 				BB945BD427F53A8C008B4A0D /* IdeaDiceView.swift */,
 				BB945BCB27F53671008B4A0D /* SavedIdeasView.swift */,
@@ -202,6 +206,7 @@
 				BB945BB927F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */,
 				BB945BBF27F53629008B4A0D /* Persistence.swift in Sources */,
 				BB945BBB27F53629008B4A0D /* InventionDiceApp.swift in Sources */,
+				BB51C737285BB68500755AF2 /* DiceRollView.swift in Sources */,
 				BB945BBD27F53629008B4A0D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +221,7 @@
 				BB945BBA27F53629008B4A0D /* InventionDice.xcdatamodeld in Sources */,
 				BB945BC027F53629008B4A0D /* Persistence.swift in Sources */,
 				BB945BBC27F53629008B4A0D /* InventionDiceApp.swift in Sources */,
+				BB51C738285BB68500755AF2 /* DiceRollView.swift in Sources */,
 				BB945BBE27F53629008B4A0D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
