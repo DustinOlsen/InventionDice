@@ -24,7 +24,66 @@ class IdeaDice: ObservableObject {
     @Published var selectedAction = ""
     @Published var selectedConsumer = ""
     
-    
+    func reRollDie(_ die: Die) -> String {
+        
+        
+        
+        switch die {
+            
+        case .materials:
+            let previousRoll = selectedMaterial
+            selectedMaterial = materials.randomElement()!
+            
+            if selectedMaterial == previousRoll {
+                selectedMaterial = materials.randomElement()!
+            }
+            
+        case .power:
+            let previousRoll = selectedPower
+            selectedPower = power.randomElement()!
+            
+            if selectedPower == previousRoll {
+                selectedPower = power.randomElement()!
+            }
+            
+        case .scale:
+            let previousRoll = selectedScale
+            selectedScale = scale.randomElement()!
+            
+            if selectedScale == previousRoll {
+                selectedScale = scale.randomElement()!
+            }
+            
+        case .device:
+            let previousRoll = selectedDevice
+            selectedDevice = device.randomElement()!
+            
+            if selectedDevice == previousRoll {
+                selectedDevice = device.randomElement()!
+            }
+            
+        case .consumer:
+            let previousRoll = selectedConsumer
+            selectedConsumer = consumer.randomElement()!
+            
+            if selectedConsumer == previousRoll {
+                selectedConsumer = consumer.randomElement()!
+            }
+            
+        case .action:
+            let previousRoll = selectedAction
+            selectedAction = action.randomElement()!
+            
+            if selectedAction == previousRoll {
+                selectedAction = action.randomElement()!
+            }
+        
+        }
+        
+        let idea = "\(selectedPower)-powered \(selectedMaterial) \(selectedScale) \(selectedConsumer) \(selectedAction) \(selectedDevice)"
+        
+        return idea
+    }
     
     func rollIdea() -> String {
         selectedMaterial = materials.randomElement()!
@@ -41,28 +100,6 @@ class IdeaDice: ObservableObject {
         
     }
     
-    func reRoll(aspect: Die) {
-        switch aspect {
-        case .materials:
-            selectedMaterial = materials.randomElement()!
-            
-        case .power:
-            selectedPower = power.randomElement()!
-            
-        case .scale:
-            selectedScale = scale.randomElement()!
-            
-        case .device:
-            selectedDevice = device.randomElement()!
-            
-        case .action:
-            selectedAction = action.randomElement()!
-            
-        case .consumer:
-            selectedConsumer = consumer.randomElement()!
-        }
-        
-    }
     
 }
 
